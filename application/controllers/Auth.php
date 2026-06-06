@@ -11,7 +11,6 @@ class Auth extends CI_Controller {
 
     public function index()
 	{
-		// Jika sudah login, redirect ke dashboard
 		if ($this->session->userdata('user')) {
 			redirect('dashboard');
 		}

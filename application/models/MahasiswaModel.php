@@ -9,7 +9,7 @@ class MahasiswaModel extends CI_Model {
 
 	public function getById($id)
 	{
-		return $this->db->get_where('mahasiswa', ['mahasiswa_id' => $id])->row_array();
+		return $this->db->get_where('mahasiswa', ['	MAHASISWA_ID' => $id])->row_array();
 	}
 
 	public function insert($data)
@@ -19,20 +19,20 @@ class MahasiswaModel extends CI_Model {
 
 	public function update($id, $data)
 	{
-		$this->db->where('mahasiswa_id', $id);
+		$this->db->where('	MAHASISWA_ID', $id);
 		return $this->db->update('mahasiswa', $data);
 	}
 
 	public function delete($id)
 	{
-		$this->db->where('mahasiswa_id', $id);
+		$this->db->where('	MAHASISWA_ID', $id);
 		return $this->db->delete('mahasiswa');
 	}
 
     public function checkAccount($data)
     {
-        $this->db->where('mahasiswa_email', $data['email']);
-        $this->db->where('mahasiswa_password', sha1($data['password']));
+        $this->db->where('	MAHASISWA_EMAIL', $data['email']);
+        $this->db->where('	MAHASISWA_PASSWORD',($data['password']));
         $account = $this->db->get('mahasiswa', 1)->row_array();
 
         if ($account) {

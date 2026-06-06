@@ -21,14 +21,14 @@
                     <?php foreach ($mahasiswa as $key => $value): ?>
                         <tr>
                             <td><?php echo $key+1 ?>.</td>
-                            <td><?php echo $value['mahasiswa_nim'] ?></td>
-                            <td><?php echo $value['mahasiswa_nama'] ?></td>
-                            <td><?php echo $value['mahasiswa_email'] ?></td>
+                            <td><?php echo $value['MAHASISWA_NIM'] ?></td>
+                            <td><?php echo $value['MAHASISWA_NAMA'] ?></td>
+                            <td><?php echo $value['MAHASISWA_EMAIL'] ?></td>
                             <td>
-                                <a class="btn btn-warning btn-sm" href="<?php echo base_url('mahasiswa/ubah/'.$value['mahasiswa_id']) ?>">
+                                <a class="btn btn-warning btn-sm" href="<?php echo base_url('mahasiswa/ubah/'.$value['MAHASISWA_ID']) ?>">
 									<i class="bi bi-pencil-square"></i>
 								</a>
-								<a class="btn btn-danger btn-sm btn-hapus" href="<?php echo base_url('mahasiswa/hapus/'.$value['mahasiswa_id']) ?>">
+								<a class="btn btn-danger btn-sm btn-hapus" href="<?php echo base_url('mahasiswa/hapus/'.$value['MAHASISWA_ID']) ?>">
 									<i class="bi bi-trash"></i>
 								</a>
                             </td>
